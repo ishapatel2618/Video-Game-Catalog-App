@@ -1,0 +1,13 @@
+<div class="container bootstrap snipets">
+<h1 class="text-center text-muted">Video catalog</h1>
+<div class="row flow-offset-1">
+    <div ng-repeat="x in videoGames track by $index" class="col-xs-6 col-md-4">
+    <div class="product tumbnail thumbnail-3"><a href="#"><img src="https://dummyimage.com/270x271/000/fff" alt=""></a>
+        <div class="caption">
+        <h5><a href="#">{{x.p_GameName}}</a></h5><span class="price sale">{{x.p_Price}}</span>
+            <h6><span>Ratings: <a href="#">{{x.p_Ratings}}</a></span></h6>
+        </div>
+    </div>
+    </div>
+</div>
+</div>

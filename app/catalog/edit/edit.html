@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-8"><h2>Video Game Catalog Edit</h2></div>
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Game ID</th>
+                    <th>Game Name</th>
+                    <th>Price</th>
+                    <th>Release Date</th>
+                    <th>Reviews</th>
+                    <th>ESRB Ratings</th>
+                    <th>
+                        <div class="row">
+                            <button type="button" class="btn btn-success add-new" ng-click="onAddNew()"><i class="fa fa-plus"></i></button>
+                            <button type="button" class="btn btn-success add-new" ng-click="onReload()"><i class="fa fa-refresh"></i></button>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in videoGames track by $index">
+                    <td>{{x.p_GameId}}</td>
+                    <td><input type="text" ng-model="x.p_GameName" /></td>
+                    <td><input type="text" ng-model="x.p_Price" /></td>
+                    <td><input type="text" ng-model="x.p_ReleaseDate" /></td>
+                    <td><input type="text" ng-model="x.p_Ratings" /></td> 
+                    <td><input type="text" ng-model="x.p_ESRBRating" /></td>
+                    <td>
+                        <div class="row">
+                            <button type="button" class="btn btn-success add-new" ng-click="onUpdate(x,x.p_GameId)"><i class="fa fa-pencil-square"></i></button>
+                            <button type="button" class="btn btn-danger add-new" ng-click="onDelete(x.p_GameId)"><i class="fa fa-trash"></i></button>
+                        </div>
+                    </td>   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>    
